@@ -26,3 +26,17 @@ document.addEventListener('click', (e) => {
         });
     }
 });
+
+document.addEventListener('click', (e) => {
+    if (e.target.tagName === 'DIV') {
+        fetch('/api/track', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                type: 'div_click',
+                button: e.target.textContent,
+                time: new Date().toISOString()
+            })
+        });
+    }
+});

@@ -1,0 +1,87 @@
+[
+  {
+    "type": "page_view",
+    "url": "http://localhost:3000/",
+    "time": "2026-02-10T04:35:05.981Z"
+  },
+  {
+    "type": "button_click",
+    "button": "Click me to track!",
+    "time": "2026-02-10T04:35:08.373Z"
+  },
+  {
+    "type": "button_click",
+    "button": "Click me to track!",
+    "time": "2026-02-10T04:35:08.655Z"
+  },
+  {
+    "type": "button_click",
+    "button": "Click me to track!",
+    "time": "2026-02-10T04:36:53.725Z"
+  },
+  {
+    "type": "button_click",
+    "button": "Click me to track!",
+    "time": "2026-02-10T04:42:36.590Z"
+  },
+  {
+    "type": "button_click",
+    "button": "Another button",
+    "time": "2026-02-10T04:42:37.558Z"
+  },
+  {
+    "type": "page_view",
+    "url": "http://localhost:3000/",
+    "time": "2026-02-10T05:14:42.957Z"
+  },
+  {
+    "type": "button_click",
+    "button": "Another button",
+    "time": "2026-02-10T05:14:49.286Z"
+  },
+  {
+    "type": "page_view",
+    "url": "http://localhost:3000/",
+    "time": "2026-02-10T05:15:09.410Z"
+  },
+  {
+    "type": "page_view",
+    "url": "http://localhost:3000/",
+    "time": "2026-02-10T05:16:11.124Z"
+  },
+  {
+    "type": "button_click",
+    "button": "Click me to track!",
+    "time": "2026-02-10T05:19:07.419Z"
+  },
+  {
+    "type": "page_view",
+    "url": "http://localhost:3000/",
+    "time": "2026-02-10T05:23:11.978Z"
+  },
+  {
+    "type": "div_click",
+    "button": "\n    Test Page\n    Click me to track!\n    Another button\n     hello\n    ",
+    "time": "2026-02-10T05:23:17.817Z"
+  },
+  {
+    "type": "div_click",
+    "button": "\n    Test Page\n    Click me to track!\n    Another button\n     hello\n    ",
+    "time": "2026-02-10T05:23:25.584Z"
+  },
+  {
+    "type": "div_click",
+    "button": "\n    Test Page\n    Click me to track!\n    Another button\n     hello\n    ",
+    "time": "2026-02-10T05:23:25.733Z"
+  },
+  {
+    "type": "div_click",
+    "button": "\n    Test Page\n    Click me to track!\n    Another button\n     hello\n    ",
+    "time": "2026-02-10T05:23:26.132Z"
+  },
+  {
+    "type": "div_click",
+    "button": "\n    Test Page\n    Click me to track!\n    Another button\n     hello\n    ",
+    "time": "2026-02-10T05:23:26.949Z"
+  }
+]
