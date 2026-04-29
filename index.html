@@ -1,15 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Simple Test</title>
+    <title>Customer Scoring Demo</title>
 </head>
 <body>
-    <div>
-    <h1>Test Page</h1>
-    <button>Click me to track!</button>
-    <button>Another button</button>
-    <h1> hello</h1>
+    <h1>Test Buttons - Click to see scores</h1>
+    
+    <button onclick="handleClick(this)">Buy Now</button>
+    <button onclick="handleClick(this)">Add to Cart</button>
+    <button onclick="handleClick(this)">Learn More</button>
+    <button onclick="handleClick(this)">Cancel</button>
+    <button onclick="handleClick(this)">Subscribe</button>
+    <button onclick="handleClick(this)">Next</button>
+    <button onclick="handleClick(this)">No Thanks</button>
+    
+    <div id="scoreDisplay" style="margin-top: 20px; padding: 10px; border: 1px solid #ccc;">
+        <h3>Current Score: <span id="currentScore">0</span></h3>
+        <p>Interest Level: <span id="interestLevel">Cold</span></p>
+        <button onclick="showLeaderboard()">Show Leaderboard</button>
+        <div id="leaderboard"></div>
     </div>
-    <script src="tracker.js"></script>
+
+    <script src="scoring.js"></script>
+    <script>
+        // Simple demo customer ID
+        const demoCustomerId = 'demo_customer_123';
+        
+        function handleClick(button) {
+            const result = window.customerScoring.updateCustomerScore(
+                demoCustomerId, 
+                button.textContent,
+                {
+                    pageDepth: 2,
+                    url: window.location.href
+                }
+            );
+            
+            // Update display
+            document.getElementById('currentScore').textContent = result.totalScore;
+            
+            // Get updated customer info
+            const customerInfo = window.customerScoring.getCustomerScore(demoCustomerId);
+            document.getElementById('interestLevel').textContent = customerInfo.interestLevel;
+            
+            console.log('Score updated:', result);
+        }
+        
+        function showLeaderboard() {
+            const leaderboard = window.customerScoring.getLeaderboard(5);
+            const display = document.getElementById('leaderboard');
+            
+            let html = '<h4>Top Customers:</h4><ol>';
+            leaderboard.forEach(customer => {
+                html += `<li>${customer.id}: ${customer.totalScore} points (${customer.interestLevel})</li>`;
+            });
+            html += '</ol>';
+            
+            display.innerHTML = html;
+        }
+        
+        // Initialize
+        document.getElementById('currentScore').textContent = 
+            window.customerScoring.getCustomerScore(demoCustomerId).totalScore;
+    </script>
 </body>
 </html>
